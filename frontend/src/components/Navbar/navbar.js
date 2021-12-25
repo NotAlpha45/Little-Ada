@@ -8,8 +8,13 @@ const Navbar = () => {
   const user = null; // A mock user.
 
   return (
-    <AppBar className={classes.AppBar} position="static" color="inherit">
-      <div>
+    <AppBar
+      className={classes.appBar}
+      position="static"
+      color="inherit"
+      maxWidth="lg"
+    >
+      <div className={classes.brandContainer}>
         <Typography className={classes.heading} variant="h2" aligh="center">
           Navbar
         </Typography>
@@ -30,7 +35,7 @@ const Navbar = () => {
             </Avatar>
 
             {/* Typography for the username */}
-            <Typography className={classes.username} variant="h6">
+            <Typography className={classes.userName} variant="h6">
               {user.result.name}
             </Typography>
 
@@ -40,14 +45,14 @@ const Navbar = () => {
               variant="contained"
               color="secondary"
             >
-              Logout
+              Log out
             </Button>
           </div>
         ) : (
           // If the user is nott logged in, the login button will redirect to the authentication
           // page. This button is not exactly a button, but rather a linker to another page.
           <Button component={Link} to="/auth" color="primary">
-            Login
+            Log in
           </Button>
         )}
       </Toolbar>

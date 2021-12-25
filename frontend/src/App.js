@@ -1,14 +1,21 @@
 import React from "react";
 import Navbar from "./components/Navbar/navbar";
-import { BrowserRouter, Switch, Route } from "react-router-dom";
+import { Container } from "@material-ui/core";
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+import Auth from "./components/Auth/Auth";
+import Home from "./components/Home/Home";
 
-const App = () => {
-  return (
-    <div>
+const App = () => (
+  <BrowserRouter>
+    <Container maxWidth="lg">
       <Navbar />
-      <h1>Hello World</h1>
-    </div>
-  );
-};
+      <Routes>
+        {/* What component to render when a certain path is found */}
+        <Route path="/" element={<Home />} />
+        <Route path="/auth" element={<Auth />} />
+      </Routes>
+    </Container>
+  </BrowserRouter>
+);
 
 export default App;

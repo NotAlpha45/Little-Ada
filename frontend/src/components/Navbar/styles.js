@@ -1,27 +1,43 @@
-import { makeStyles } from "@material-ui/core/styles";
+import { makeStyles } from '@material-ui/core/styles';
+import { deepPurple } from '@material-ui/core/colors';
 
-// This is an entire configuration of a theme. For every component, we can use a
-// theme component defined here as the className attribute. Example: className = {classes.AppBar}
-// Here we imported the makeStyles as useStyles() and gave classes = useStyles()
 export default makeStyles((theme) => ({
-  root: {
-    "& .MuiTextField-root": {
-      margin: theme.spacing(1),
-    },
+  appBar: {
+    borderRadius: 15,
+    margin: '30px 0',
+    display: 'flex',
+    flexDirection: 'row',
+    justifyContent: 'space-between',
+    alignItems: 'center',
+    padding: '10px 50px',
   },
-  paper: {
-    padding: theme.spacing(2),
+  heading: {
+    color: 'rgba(0,183,255, 1)',
+    textDecoration: 'none',
   },
-  form: {
-    display: "flex",
-    flexWrap: "wrap",
-    justifyContent: "center",
+  image: {
+    marginLeft: '15px',
   },
-  fileInput: {
-    width: "97%",
-    margin: "10px 0",
+  toolbar: {
+    display: 'flex',
+    justifyContent: 'flex-end',
+    width: '400px',
   },
-  buttonSubmit: {
-    marginBottom: 10,
+  profile: {
+    display: 'flex',
+    justifyContent: 'space-between',
+    width: '400px',
+  },
+  userName: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  brandContainer: {
+    display: 'flex',
+    alignItems: 'center',
+  },
+  purple: {
+    color: theme.palette.getContrastText(deepPurple[500]),
+    backgroundColor: deepPurple[500],
   },
 }));
