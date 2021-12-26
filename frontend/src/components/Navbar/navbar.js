@@ -10,13 +10,13 @@ const Navbar = () => {
   return (
     <AppBar
       className={classes.appBar}
-      position="static"
+      position="relative"
       color="inherit"
       maxWidth="lg"
     >
       <div className={classes.brandContainer}>
         <Typography className={classes.heading} variant="h2" aligh="center">
-          Navbar
+          Little Ada
         </Typography>
       </div>
       {/* Toolbar will contain the logic and show whether an user is logged in or not */}
@@ -47,13 +47,22 @@ const Navbar = () => {
             >
               Log out
             </Button>
+
           </div>
         ) : (
           // If the user is nott logged in, the login button will redirect to the authentication
           // page. This button is not exactly a button, but rather a linker to another page.
-          <Button component={Link} to="/auth" color="primary">
+          <Button
+            component={Link}
+            to="/signIn"
+            color="success"
+            className={classes.button1}
+            variant="contained"
+            disabled={user ? true : false}
+          >
             Log in
           </Button>
+          
         )}
       </Toolbar>
     </AppBar>
