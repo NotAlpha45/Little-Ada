@@ -16,10 +16,17 @@ import useStyles from "./styles";
 import { Icon } from "@mui/material";
 import GoogleIcon from "./googleIcon";
 import { GoogleLogin } from "react-google-login";
+import { useDispatch } from "react-redux";
+
 const theme = createTheme();
 
 export default function SignIn() {
   const classes = useStyles();
+
+  // Use dispatch will automatically detect change and dispatch a response
+  // all across the system.
+  const dispatch = useDispatch();
+
   // Successful log in will return a response.
   const googleSuccess = async (res) => {
     console.log(res);
@@ -27,6 +34,9 @@ export default function SignIn() {
     const token = res?.tokenId;
 
     try {
+      // Dispatching a response of type 'AUTH' and with a
+      // result and response data.
+      dispatch({ type: "AUTH", data: { result, token } });
     } catch (error) {
       console.log(error);
     }

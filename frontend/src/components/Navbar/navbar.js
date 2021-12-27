@@ -12,7 +12,7 @@ const Navbar = () => {
       className={classes.appBar}
       position="relative"
       color="inherit"
-      maxWidth="lg"
+      maxwidth="lg"
     >
       <div className={classes.brandContainer}>
         <Typography className={classes.heading} variant="h2" aligh="center">
@@ -43,7 +43,6 @@ const Navbar = () => {
             <Button
               className={classes.logout}
               variant="contained"
-              color="secondary"
             >
               Log out
             </Button>
@@ -55,7 +54,6 @@ const Navbar = () => {
           <Button
             component={Link}
             to="/signIn"
-            color="success"
             className={classes.button1}
             variant="contained"
             disabled={user ? true : false}

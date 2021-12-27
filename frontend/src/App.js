@@ -6,6 +6,7 @@ import Auth from "./components/Auth/Auth";
 import Home from "./components/Home/Home";
 import SignIn from "./components/Auth/SignIn";
 
+
 const App = () => (
   <BrowserRouter>
     <Container maxWidth="lg">
