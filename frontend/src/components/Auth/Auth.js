@@ -17,19 +17,50 @@ import { ClassNames } from "@emotion/react";
 import useStyles from "./styles";
 import { Icon } from "@mui/material";
 import GoogleIcon from "./googleIcon";
+import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
+import { useNavigate, useLocation } from "react-router-dom";
+import { signup } from "../../actions/auth";
+
+// The initial state of the form data. In case of google auth, the initial state
+// is provided by google.
+const initialState = {
+  firstName: "",
+  lastName: "",
+  email: "",
+  password: "",
+  confirmPassword: "",
+};
 
 const theme = createTheme();
 
 export default function SignUp() {
+  const classes = useStyles();
 
-  const classes = useStyles()
+  const dispatch = useDispatch();
+
+  const navigate = useNavigate();
+
+  const [formData, setFormData] = useState(initialState);
+
   const handleSubmit = (event) => {
     event.preventDefault();
+
+    // Gets the form data from all of the textfields
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
+
+    if (data.get("password") !== data.get("confirmPassword")) {
+      alert("Passwords don't match!");
+    } else {
+      dispatch(signup(data, navigate));
+    }
+
     console.log({
+      firstName: data.get("firstName"),
       email: data.get("email"),
       password: data.get("password"),
+      confirmPassword: data.get("confirmPassword"),
     });
   };
 

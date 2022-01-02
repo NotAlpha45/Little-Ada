@@ -18,6 +18,8 @@ import GoogleIcon from "./googleIcon";
 import { GoogleLogin } from "react-google-login";
 import { useDispatch } from "react-redux";
 import { useNavigate } from "react-router-dom";
+import { useState, useEffect } from "react";
+import { signin } from "../../actions/auth";
 
 const theme = createTheme();
 
@@ -54,10 +56,12 @@ export default function SignIn() {
     console.log("Google Login Failed");
   };
 
+  // Handles when the sign in occurs manually.
   const handleSubmit = (event) => {
     event.preventDefault();
     const data = new FormData(event.currentTarget);
     // eslint-disable-next-line no-console
+    dispatch(signin(data, navigate));
     console.log({
       email: data.get("email"),
       password: data.get("password"),
@@ -79,6 +83,7 @@ export default function SignIn() {
           <Avatar sx={{ m: 1, bgcolor: "secondary.main" }}>
             <LockOutlinedIcon />
           </Avatar>
+
           <Typography component="h1" variant="h5">
             Sign in
           </Typography>
