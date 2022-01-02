@@ -17,17 +17,21 @@ import { Icon } from "@mui/material";
 import GoogleIcon from "./googleIcon";
 import { GoogleLogin } from "react-google-login";
 import { useDispatch } from "react-redux";
+import { useNavigate } from "react-router-dom";
 
 const theme = createTheme();
 
 export default function SignIn() {
   const classes = useStyles();
 
+  const navigate = useNavigate();
+
   // Use dispatch will automatically detect change and dispatch a response
   // all across the system.
   const dispatch = useDispatch();
 
-  // Successful log in will return a response.
+  // Successful log in will return a response. The response
+  // will have a token that
   const googleSuccess = async (res) => {
     console.log(res);
     const result = res?.profileObj;
@@ -37,6 +41,9 @@ export default function SignIn() {
       // Dispatching a response of type 'AUTH' and with a
       // result and response data.
       dispatch({ type: "AUTH", data: { result, token } });
+
+      // After dispatch, go to the homescreen again.
+      navigate("/");
     } catch (error) {
       console.log(error);
     }
