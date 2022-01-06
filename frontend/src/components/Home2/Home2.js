@@ -1,23 +1,54 @@
 import React from "react";
 import "./Home.css";
 import "./nicepage.css";
+import { Helmet } from "react-helmet";
 
 const Home = () => {
+
   return (
     <div>
+      {/* Header section */}
+      <Helmet>
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <meta charset="utf-8" />
+        <meta
+          name="keywords"
+          content="Easily Accessible &amp;amp; Secure, Data Visualization, High availability infrastructure, Hosting Datacenter"
+        />
+        <meta name="description" content="" />
+        <meta
+          name="page_type"
+          content="np-template-header-footer-from-plugin"
+        />
 
-      <script
-        className="u-script"
-        type="text/javascript"
-        src="jquery.js"
-        defer=""
-      ></script>
-      <script
-        className="u-script"
-        type="text/javascript"
-        src="nicepage.js"
-        defer=""
-      ></script>
+        <script
+          class="u-script"
+          type="text/babel"
+          src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
+          defer=""
+        ></script>
+        <script
+          class="u-script"
+          type="text/babel"
+          src="nicepage.js"
+          defer=""
+        ></script>
+        <meta name="generator" content="Nicepage 4.2.6, nicepage.com" />
+        <link
+          id="u-theme-google-font"
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+        />
+        <link
+          id="u-page-google-font"
+          rel="stylesheet"
+          href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+        />
+
+        <meta name="theme-color" content="#478ac9" />
+        <meta property="og:title" content="Home" />
+        <meta property="og:type" content="website" />
+      </Helmet>
 
       <header className="u-clearfix u-header u-header" id="sec-ddba">
         <div className="u-clearfix u-sheet u-sheet-1">
@@ -131,7 +162,7 @@ const Home = () => {
                     <li className="u-nav-item">
                       <a
                         className="u-button-style u-nav-link"
-                        href="/login"
+                        href="/signIn"
                         style={{ padding: "10px 28px" }}
                       >
                         Log In
@@ -145,6 +176,7 @@ const Home = () => {
           </nav>
         </div>
       </header>
+
       <section
         className="skrollable u-clearfix u-image u-parallax u-shading u-section-1"
         id="sec-85c4"
@@ -172,6 +204,7 @@ const Home = () => {
           </p>
         </div>
       </section>
+
       <section
         className="skrollable u-align-center u-clearfix u-image u-parallax u-shading u-valign-middle-sm u-valign-middle-xs u-section-2"
         id="carousel_328c"
