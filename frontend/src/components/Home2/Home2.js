@@ -4,7 +4,6 @@ import "./nicepage.css";
 import { Helmet } from "react-helmet";
 
 const Home = () => {
-
   return (
     <div>
       {/* Header section */}
