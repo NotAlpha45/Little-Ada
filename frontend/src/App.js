@@ -3,7 +3,7 @@ import Navbar from "./components/Navbar/navbar";
 import { Container } from "@material-ui/core";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 import Auth from "./components/Auth/Auth";
-import Home from "./components/Home/Home";
+import Home from "./components/Home2/Home2";
 import SignIn from "./components/Auth/SignIn";
 import ReactNavbar from "react-responsive-animate-navbar";
 
