@@ -6,11 +6,10 @@ import Auth from "./components/Auth/Auth";
 import Home from "./components/Home2/Home2";
 import SignIn from "./components/Auth/SignIn";
 
-
 const App = () => (
   <BrowserRouter>
     <Container maxWidth="lg">
-      <Navbar />
+      {/* <Navbar /> */}
       <Routes>
         {/* What component to render when a certain path is found */}
         <Route path="/" element={<Home />} />

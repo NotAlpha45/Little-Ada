@@ -2,52 +2,47 @@ import React from "react";
 import "./Home.css";
 import "./nicepage.css";
 import { Helmet } from "react-helmet";
+import { useState, useEffect } from "react";
+import { Link } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { useNavigate, useLocation } from "react-router-dom";
 
 const Home = () => {
+  const dispatch = useDispatch();
+  const navigate = useNavigate();
+
+  // Tracks a change in which page currently is showing
+  const location = useLocation();
+  // User is fetched from the dispatched data we stored at the local storage
+  // from the authReducer (reducers/auth.js)
+  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+
+  // A log in effecter, what happens after log in.
+  useEffect(() => {
+    // If a token of a logged in user found
+    const token = user?.token;
+
+    setUser(JSON.parse(localStorage.getItem("profile")));
+  }, [location]);
+
+  const logOut = () => {
+    dispatch({ type: "LOGOUT" });
+    navigate("/");
+    setUser(null);
+  };
+
   return (
     <div>
-      {/* Header section */}
-      <Helmet>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-        <meta charset="utf-8" />
-        <meta
-          name="keywords"
-          content="Easily Accessible &amp;amp; Secure, Data Visualization, High availability infrastructure, Hosting Datacenter"
-        />
-        <meta name="description" content="" />
-        <meta
-          name="page_type"
-          content="np-template-header-footer-from-plugin"
-        />
-
-        <script
-          class="u-script"
-          type="text/babel"
-          src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"
-          defer=""
-        ></script>
-        <script
-          class="u-script"
-          type="text/babel"
-          src="nicepage.js"
-          defer=""
-        ></script>
-        <meta name="generator" content="Nicepage 4.2.6, nicepage.com" />
-        <link
-          id="u-theme-google-font"
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-        />
-        <link
-          id="u-page-google-font"
-          rel="stylesheet"
-          href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-        />
-
-        <meta name="theme-color" content="#478ac9" />
-        <meta property="og:title" content="Home" />
-        <meta property="og:type" content="website" />
-      </Helmet>
+      <link
+        id="u-theme-google-font"
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
+      />
+      <link
+        id="u-page-google-font"
+        rel="stylesheet"
+        href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
+      />
 
       <header className="u-clearfix u-header u-header" id="sec-ddba">
         <div className="u-clearfix u-sheet u-sheet-1">
@@ -106,15 +101,29 @@ const Home = () => {
                     About
                   </a>
                 </li>
-                <li className="u-nav-item">
-                  <a
-                    className="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
-                    href="/login"
-                    style={{ padding: "10px 28px" }}
-                  >
-                    Log In
-                  </a>
-                </li>
+
+                {!user ? (
+                  <li className="u-nav-item">
+                    <a
+                      className="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
+                      href="/signIn"
+                      style={{ padding: "10px 28px" }}
+                    >
+                      Log In
+                    </a>
+                  </li>
+                ) : (
+                  <li className="u-nav-item">
+                    <a
+                      className="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
+                      href="javascript:"
+                      onClick = {logOut}
+                      style={{ padding: "10px 28px" }}
+                    >
+                      Log Out
+                    </a>
+                  </li>
+                )}
               </ul>
             </div>
             <div className="u-custom-menu u-nav-container-collapse">
