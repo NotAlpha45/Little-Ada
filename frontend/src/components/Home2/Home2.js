@@ -1,15 +1,16 @@
 import React from "react";
 import "./Home.css";
 import "./nicepage.css";
-import { Helmet } from "react-helmet";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
+import useStyles from "./styles";
 
 const Home = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
+  const classes = useStyles();
 
   // Tracks a change in which page currently is showing
   const location = useLocation();
@@ -117,7 +118,7 @@ const Home = () => {
                     <a
                       className="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
                       href="javascript:"
-                      onClick = {logOut}
+                      onClick={logOut}
                       style={{ padding: "10px 28px" }}
                     >
                       Log Out
@@ -126,61 +127,7 @@ const Home = () => {
                 )}
               </ul>
             </div>
-            <div className="u-custom-menu u-nav-container-collapse">
-              <div className="u-black u-container-style u-inner-container-layout u-opacity u-opacity-95 u-sidenav">
-                <div className="u-inner-container-layout u-sidenav-overflow">
-                  <div className="u-menu-close"></div>
-                  <ul className="u-align-center u-nav u-popupmenu-items u-unstyled u-nav-2">
-                    <li className="u-nav-item">
-                      <a
-                        className="u-button-style u-nav-link"
-                        href="#"
-                        style={{ padding: "10px 28px" }}
-                      >
-                        Home
-                      </a>
-                    </li>
-                    <li className="u-nav-item">
-                      <a
-                        className="u-button-style u-nav-link"
-                        href="#"
-                        style={{ padding: "10px 28px" }}
-                      >
-                        Topics
-                      </a>
-                    </li>
-                    <li className="u-nav-item">
-                      <a
-                        className="u-button-style u-nav-link"
-                        href="#"
-                        style={{ padding: "10px 28px" }}
-                      >
-                        Code Sandbox
-                      </a>
-                    </li>
-                    <li className="u-nav-item">
-                      <a
-                        className="u-button-style u-nav-link"
-                        href="#"
-                        style={{ padding: "10px 28px" }}
-                      >
-                        About
-                      </a>
-                    </li>
-                    <li className="u-nav-item">
-                      <a
-                        className="u-button-style u-nav-link"
-                        href="/signIn"
-                        style={{ padding: "10px 28px" }}
-                      >
-                        Log In
-                      </a>
-                    </li>
-                  </ul>
-                </div>
-              </div>
-              <div className="u-black u-menu-overlay u-opacity u-opacity-70"></div>
-            </div>
+
           </nav>
         </div>
       </header>
