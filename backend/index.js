@@ -5,6 +5,7 @@ import cors from "cors";
 
 import postRoutes from "./routes/posts.js";
 import getHome from "./routes/home.js";
+import userRoutes from "./routes/users.js";
 
 const app = express();
 
@@ -14,6 +15,9 @@ app.use(cors());
 
 app.use("/", getHome);
 app.use("/posts", postRoutes);
+
+// Routes to user related paths (Signup, sign in etc)
+app.use("/user", userRoutes);
 
 // Database connection
 const CONNECTION_URL =

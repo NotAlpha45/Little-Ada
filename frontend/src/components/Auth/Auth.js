@@ -54,14 +54,15 @@ export default function SignUp() {
       alert("Passwords don't match!");
     } else {
       dispatch(signup(data, navigate));
-    }
 
-    console.log({
-      firstName: data.get("firstName"),
-      email: data.get("email"),
-      password: data.get("password"),
-      confirmPassword: data.get("confirmPassword"),
-    });
+      console.log({
+        firstName: data.get("firstName"),
+        lastName: data.get("lastName"),
+        email: data.get("email"),
+        password: data.get("password"),
+        confirmPassword: data.get("confirmPassword"),
+      });
+    }
   };
 
   return (
