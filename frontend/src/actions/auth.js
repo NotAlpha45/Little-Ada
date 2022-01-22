@@ -4,8 +4,6 @@ import { AUTH } from "../constants/actionTypes";
 import { useDispatch } from "react-redux";
 import * as api from "../api/index"
 
-// Mock signin and signup for now
-
 export const signin = (formData, navigate) => async (dispatch) => {
   try {
 
