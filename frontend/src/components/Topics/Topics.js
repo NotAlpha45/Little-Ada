@@ -6,26 +6,16 @@ const Topics = () => {
   return (
     <div>
       <title>Topics</title>
-      <link
-        id="u-theme-google-font"
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-      />
-      <link
-        id="u-page-google-font"
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Titillium+Web:200,200i,300,300i,400,400i,600,600i,700,700i,900|Ubuntu:300,300i,400,400i,500,500i,700,700i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-      />
 
       <section
-        className="u-align-center u-clearfix u-white u-section-1"
+        className="u-align-center u-clearfix u-white u-section-topic-1"
         id="carousel_b13d"
       >
         <div className="u-clearfix u-sheet u-sheet-1">
           <h1 className="u-align-center u-custom-font u-font-titillium-web u-text u-text-default u-text-1">
             Topics
           </h1>
-          <p className="u-text u-text-2">Pick Up A Starting Point</p>
+          <p className="u-text u-text-2">Pick Up A Stating Point</p>
           <img
             alt=""
             className="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-image u-image-default u-image-1"
