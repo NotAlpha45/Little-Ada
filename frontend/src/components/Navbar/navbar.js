@@ -1,6 +1,6 @@
 import React from "react";
-import "./Home.css";
-import "./nicepage.css";
+import "../Home2/Home.css";
+import "../Resource/nicepage.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
@@ -34,16 +34,7 @@ const Navbar = () => {
 
   return (
     <div>
-      <link
-        id="u-theme-google-font"
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Roboto:100,100i,300,300i,400,400i,500,500i,700,700i,900,900i|Open+Sans:300,300i,400,400i,600,600i,700,700i,800,800i"
-      />
-      <link
-        id="u-page-google-font"
-        rel="stylesheet"
-        href="https://fonts.googleapis.com/css?family=Ubuntu:300,300i,400,400i,500,500i,700,700i|Raleway:100,100i,200,200i,300,300i,400,400i,500,500i,600,600i,700,700i,800,800i,900,900i"
-      />
+     
 
       <header className="u-clearfix u-header u-header" id="sec-ddba">
         <div className="u-clearfix u-sheet u-sheet-1">
@@ -78,7 +69,7 @@ const Navbar = () => {
                 <li className="u-nav-item">
                   <a
                     className="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
-                    href="#"
+                    href="/topics"
                     style={{ padding: "10px 28px" }}
                   >
                     Topics
@@ -87,7 +78,7 @@ const Navbar = () => {
                 <li className="u-nav-item">
                   <a
                     className="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
-                    href="#"
+                    href="/playground"
                     style={{ padding: "10px 28px" }}
                   >
                     Code Sandbox
