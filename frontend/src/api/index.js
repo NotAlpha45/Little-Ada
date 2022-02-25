@@ -12,7 +12,6 @@ API.interceptors.request.use((req) => {
   return req;
 });
 
-// Making calles to methods via API
 export const fetchPosts = () => API.get("/posts");
 export const createPost = (newPost) => API.post("/posts", newPost);
 export const likePost = (id) => API.patch(`/posts/${id}/likePost`);
