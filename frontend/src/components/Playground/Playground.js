@@ -12,7 +12,7 @@ const Playground = () => {
       <meta property="og:type" content="website" />
 
       <section
-        className="u-align-center u-clearfix u-image u-image-contain u-shading u-section-1"
+        className="u-align-center u-clearfix u-image u-image-contain u-shading u-section-playground-1"
         src=""
         data-image-width={1280}
         data-image-height={853}

@@ -27,7 +27,7 @@ const Home = () => {
       <title>Home</title>
       
       <section
-        className="skrollable u-clearfix u-image u-parallax u-shading u-section-1"
+        className="skrollable u-clearfix u-image u-parallax u-shading u-section-home-1"
         id="sec-85c4"
         data-image-width={1280}
         data-image-height={853}
@@ -54,7 +54,7 @@ const Home = () => {
         </div>
       </section>
       <section
-        className="skrollable u-align-center u-clearfix u-image u-parallax u-shading u-valign-middle-sm u-valign-middle-xs u-section-2"
+        className="skrollable u-align-center u-clearfix u-image u-parallax u-shading u-valign-middle-sm u-valign-middle-xs u-section-home-2"
         id="carousel_328c"
         data-image-width={1280}
         data-image-height={688}
@@ -131,7 +131,7 @@ const Home = () => {
         </div>
       </section>
       <section
-        className="skrollable u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-image u-parallax u-shading u-section-3"
+        className="skrollable u-align-center-lg u-align-center-md u-align-center-sm u-align-center-xs u-clearfix u-image u-parallax u-shading u-section-home-3"
         id="sec-a2e8"
         data-image-width={150}
         data-image-height={99}
