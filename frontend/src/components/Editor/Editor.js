@@ -1,7 +1,6 @@
 import React from "react";
 import "./assets/css/style.css";
 import "./assets/css/bootstrap.min.css";
-import codeEditor from "./texteditor";
 
 const Editor = function () {
   const onSelectChange = function (selectedVal) {
@@ -13,7 +12,7 @@ const Editor = function () {
   };
 
   window.onload = function () {
-    codeEditor("70");
+    codeEditor("53");
   };
   return (
     <div>
