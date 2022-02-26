@@ -3,7 +3,7 @@ const CPP_KEY = "53";
 const PYTHON_KEY = "70";
 const BASE_URL = "https://ce.judge0.com/submissions";
 
-function codeEditor(lang_id) {
+export function codeEditor(lang_id) {
   var editor = ace.edit("editor");
   editor.setTheme("ace/theme/twilight");
 

@@ -132,7 +132,7 @@ const Home = () => {
         data-image-height={99}
       >
         <h2 className="u-custom-font u-font-ubuntu u-text u-text-1">
-          Code Playground
+          Code Editor
         </h2>
         <p className="u-align-left u-text u-text-white u-text-2">
           <b style={{}}>No hassle with installing, just click and go!</b>
@@ -144,7 +144,7 @@ const Home = () => {
           alt=""
           data-image-width={1092}
           data-image-height={762}
-          data-href="#"
+          data-href="/editor"
         />
       </section>
     </div>
