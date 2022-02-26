@@ -23,9 +23,8 @@ const Home = () => {
 
   return (
     <div>
-      
       <title>Home</title>
-      
+
       <section
         className="skrollable u-clearfix u-image u-parallax u-shading u-section-home-1"
         id="sec-85c4"
@@ -76,9 +75,6 @@ const Home = () => {
                   <h4 className="u-text u-text-palette-1-base u-text-3">
                     Byte Sized Resources
                   </h4>
-                  <h4 className="u-text u-text-palette-1-base u-text-4">
-                    Byte Sized Resources
-                  </h4>
                   <p className="u-text u-text-palette-1-base u-text-5">
                     Quick and concise depiction of coding fundamentals.
                   </p>
@@ -86,17 +82,16 @@ const Home = () => {
               </div>
               <div className="u-align-center u-container-style u-list-item u-repeater-item u-shape-round u-video-cover u-white u-list-item-2">
                 <div className="u-container-layout u-similar-container u-valign-top u-container-layout-2">
-                  <img
-                    src={require("./images/221508477-0.png")}
-                    alt=""
-                    className="u-hover-feature u-image u-image-round u-image-2"
-                    data-image-width={1000}
-                    data-image-height={1000}
-                  />
+                  <a href="/playground">
+                    <img
+                      src={require("./images/221508477-0.png")}
+                      alt=""
+                      className="u-hover-feature u-image u-image-round u-image-2"
+                      data-image-width={1000}
+                      data-image-height={1000}
+                    />
+                  </a>
                   <h4 className="u-text u-text-palette-1-base u-text-6">
-                    Visualization
-                  </h4>
-                  <h4 className="u-text u-text-palette-1-base u-text-7">
                     Visualization
                   </h4>
                   <p className="u-text u-text-palette-1-base u-text-8">
