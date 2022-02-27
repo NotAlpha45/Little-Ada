@@ -1,6 +1,5 @@
 import React from "react";
 import "./Topics.css";
-import "../Resource/nicepage.css";
 
 const Topics = () => {
   return (
@@ -56,13 +55,13 @@ const Topics = () => {
                   <h4 className="u-text u-text-5">
                     Code
                     <br />
-                    Playground
+                    Editor
                   </h4>
                 </div>
               </div>
               <div
                 className="u-align-center u-container-style u-grey-80 u-hover-feature u-list-item u-repeater-item u-shape-rectangle u-list-item-4"
-                data-href="#"
+                data-href="/playground"
               >
                 <div className="u-container-layout u-similar-container u-container-layout-4">
                   <span className="u-file-icon u-icon u-icon-4">
@@ -71,7 +70,7 @@ const Topics = () => {
                   <h4 className="u-text u-text-6">
                     Code
                     <br />
-                    Simulator
+                    Sandbox
                   </h4>
                 </div>
               </div>

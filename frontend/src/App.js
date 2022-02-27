@@ -7,7 +7,7 @@ import Home from "./components/Home2/Home2";
 import SignIn from "./components/Auth/SignIn";
 import Topics from "./components/Topics/Topics";
 import Playground from "./components/Playground/Playground";
-import Editor from "./components/Editor/Editor";
+// import Editor from "./components/Editor/Editor"; 
 
 const App = () => (
   <BrowserRouter>
@@ -20,7 +20,7 @@ const App = () => (
         <Route path="/signin" element={<SignIn />} />
         <Route path="/topics" element={<Topics />} />
         <Route path="/playground" element={<Playground />} />
-        <Route path="/editor" element={<Editor />} />
+        {/* <Route path="/editor" element={<Editor />} /> */}
       </Routes>
     </Container>
   </BrowserRouter>

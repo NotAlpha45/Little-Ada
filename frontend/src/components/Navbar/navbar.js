@@ -1,6 +1,5 @@
 import React from "react";
 import "../Home2/Home.css";
-import "../Resource/nicepage.css";
 import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";

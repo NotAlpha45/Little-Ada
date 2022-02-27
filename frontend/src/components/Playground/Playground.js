@@ -1,6 +1,5 @@
 import React from "react";
 import "./Code_playground.css";
-import "../Resource/nicepage.css";
 
 const Playground = () => {
   return (
