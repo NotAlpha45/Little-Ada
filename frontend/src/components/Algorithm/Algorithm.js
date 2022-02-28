@@ -32,7 +32,7 @@ const Algorithm = () => {
                         alt=""
                         data-image-width={660}
                         data-image-height={371}
-                        data-href="#"
+                        data-href="/bubble_sort"
                       />
                       <p className="u-align-center u-text u-text-black u-text-4">
                         Sorting with bubbles of swapping!
@@ -158,7 +158,6 @@ const Algorithm = () => {
               </div>
             </div>
           </div>
-          
         </div>
       </section>
     </div>
