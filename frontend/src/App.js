@@ -7,7 +7,8 @@ import Home from "./components/Home2/Home2";
 import SignIn from "./components/Auth/SignIn";
 import Topics from "./components/Topics/Topics";
 import Playground from "./components/Playground/Playground";
-// import Editor from "./components/Editor/Editor"; 
+// import Editor from "./components/Editor/Editor";
+import Algorithm from "./components/Algorithm/Algorithm";
 
 const App = () => (
   <BrowserRouter>
@@ -20,6 +21,7 @@ const App = () => (
         <Route path="/signin" element={<SignIn />} />
         <Route path="/topics" element={<Topics />} />
         <Route path="/playground" element={<Playground />} />
+        <Route path="/algorithm" element={<Algorithm />} />
         {/* <Route path="/editor" element={<Editor />} /> */}
       </Routes>
     </Container>

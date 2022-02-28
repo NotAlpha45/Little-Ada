@@ -25,7 +25,10 @@ const Topics = () => {
           <div className="u-expanded-width-md u-expanded-width-sm u-expanded-width-xs u-list u-list-1">
             <div className="u-repeater u-repeater-1">
               <div className="u-align-center u-container-style u-custom-color-4 u-custom-item u-hover-feature u-list-item u-repeater-item u-list-item-1">
-                <div className="u-container-layout u-similar-container u-container-layout-1">
+                <div
+                  className="u-container-layout u-similar-container u-container-layout-1"
+                  data-href="#"
+                >
                   <span className="u-file-icon u-icon u-icon-1">
                     <img src={require("./images/748607.png")} alt="" />
                   </span>
@@ -36,7 +39,10 @@ const Topics = () => {
                   </h4>
                 </div>
               </div>
-              <div className="u-align-center u-container-style u-custom-color-6 u-custom-item u-hover-feature u-list-item u-repeater-item u-list-item-2">
+              <div
+                className="u-align-center u-container-style u-custom-color-6 u-custom-item u-hover-feature u-list-item u-repeater-item u-list-item-2"
+                data-href="/algorithm"
+              >
                 <div className="u-container-layout u-similar-container u-container-layout-2">
                   <span className="u-file-icon u-icon u-icon-2">
                     <img src={require("./images/3618094.png")} alt="" />
