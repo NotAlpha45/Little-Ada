@@ -1,5 +1,4 @@
 function setup() {
-  
   canvas_size[1] = windowHeight - 100;
   translate_components(windowWidth);
   drawing_canvas = createCanvas(canvas_size[0], canvas_size[1]);
@@ -46,13 +45,13 @@ function setup() {
     arraysize_slider_attributes
   );
 
-  sort_dropdown_list = dropdown_maker(
-    canvas_parent,
-    [30, 220],
-    sort_list,
-    current_selected_sort,
-    sort_dropdown_attributes
-  );
+  // sort_dropdown_list = dropdown_maker(
+  //   canvas_parent,
+  //   [30, 120],
+  //   sort_list,
+  //   current_selected_sort,
+  //   sort_dropdown_attributes
+  // );
 
   sound_checkbox = checkbox_maker(
     canvas_parent,
@@ -74,9 +73,9 @@ function setup() {
     operation_speed = int(operation_speed_slider.value());
   });
 
-  sort_dropdown_list.changed(function () {
-    current_selected_sort = sort_dropdown_list.value();
-  });
+  // sort_dropdown_list.changed(function () {
+  //   current_selected_sort = sort_dropdown_list.value();
+  // });
 
   button_maker(
     canvas_parent,

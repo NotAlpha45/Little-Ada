@@ -1,4 +1,6 @@
 // Parameters for sort functionality and drawing.
+// import { selected_sort } from "./sort_type";
+
 let random_array = [];
 
 const sort_list = [
@@ -12,6 +14,8 @@ const sort_list = [
 ];
 
 let current_selected_sort = "quick";
+
+const sort_type_export = { selected: current_selected_sort };
 
 let sort_dropdown_list;
 
@@ -69,15 +73,19 @@ const sorting_speed_element_attributes = [
   "position: absolute",
 ];
 
-const sort_dropdown_attributes = ["font-family: cursive", "font-size: 18px"];
+const sort_dropdown_attributes = [
+  "font-family: cursive",
+  "font-size: 18px",
+  "position:",
+];
 
 let sound_checkbox;
 const sound_checkbox_attributes = [
   "font-size: 18px",
   "color: magenta",
   "font-weight: bold",
-  "font-family : hack"
-]
+  "font-family : hack",
+];
 
 // let rect_width = Math.ceil(canvas_size[0] / array_size);
 // let rect_height_factor = -(canvas_size[1] / highest_val);

@@ -6,6 +6,10 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <script src="/node_modules/p5.min.js"></script>
     <script src="/node_modules/p5.sound.js"></script>
+    <script src="/functions.js"></script>
+    <script src="/parameters.js"></script>
+    <script src="/components.js"></script>
+
     <link rel="stylesheet" href="/style_sheet.css" />
     <title>Sort Visualizer</title>
   </head>
@@ -20,10 +24,10 @@
       >
       </iframe>
     </div>
-    <script src="/functions.js"></script>
 
-    <script src="/parameters.js"></script>
-    <script src="/components.js"></script>
+    <script>
+      current_selected_sort = "bubble";
+    </script>
 
     <script src="/bubbleSort.js"></script>
     <script src="/mergeSort.js"></script>
@@ -32,9 +36,6 @@
     <script src="/quickSort.js"></script>
     <script src="/heapSort.js"></script>
     <script src="/timSort.js"></script>
-    <script>
-      current_selected_sort = "bubble";
-    </script>
     <script src="/main.js"></script>
   </body>
 </html>
