@@ -7,10 +7,10 @@ import Home from "./components/Home2/Home2";
 import SignIn from "./components/Auth/SignIn";
 import Topics from "./components/Topics/Topics";
 import Playground from "./components/Playground/Playground";
-// import Editor from "./components/Editor/Editor"; 
+// import Editor from "./components/Editor/Editor";
 import Blog from "./components/Blog/Blog"
 const App = () => (
-  
+
   <BrowserRouter>
     <Container maxWidth="lg">
       <Navbar />

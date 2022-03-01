@@ -31,6 +31,7 @@ const Home = () => {
         data-image-width={1280}
         data-image-height={853}
       >
+        {/* <script>{console.log("ok")}</script> */}
         <div className="u-clearfix u-sheet u-sheet-1">
           <img
             className="u-align-center u-image u-image-1"
