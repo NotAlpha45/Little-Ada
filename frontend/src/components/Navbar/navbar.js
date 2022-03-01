@@ -86,10 +86,10 @@ const Navbar = () => {
                 <li className="u-nav-item">
                   <a
                     className="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
-                    href="#"
+                    href="/blog"
                     style={{ padding: "10px 28px" }}
                   >
-                    About
+                    Blog
                   </a>
                 </li>
 
