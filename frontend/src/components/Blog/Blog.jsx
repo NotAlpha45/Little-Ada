@@ -10,7 +10,7 @@ export default function Blog() {
     <>
       
       <div className="blog">
-        <Posts /> 
+        <Posts/> 
         
       </div>
     </>
