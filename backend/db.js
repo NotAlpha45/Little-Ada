@@ -7,7 +7,7 @@ module.exports = () => {
 	};
 	try {
 		//process.env.DB
-		mongoose.connect('mongodb+srv://Tasfia_Tahsin:123@cluster0.mb4yr.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', connectionParams);
+		mongoose.connect('mongodb+srv://raiyan:1234@cluster0.uoc1c.mongodb.net/myFirstDatabase?retryWrites=true&w=majority', connectionParams);
 		console.log("Connected to database successfully");
 	} catch (error) {
 		console.log(error);

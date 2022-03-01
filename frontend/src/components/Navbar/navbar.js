@@ -4,37 +4,41 @@ import { useState, useEffect } from "react";
 import { Link } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import { useNavigate, useLocation } from "react-router-dom";
-import useStyles from "./styles";
 
 const Navbar = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
-  const classes = useStyles();
 
   // Tracks a change in which page currently is showing
   const location = useLocation();
-  // User is fetched from the dispatched data we stored at the local storage
-  // from the authReducer (reducers/auth.js)
-  const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
+  // // User is fetched from the dispatched data we stored at the local storage
+  // // from the authReducer (reducers/auth.js)
+  // const [user, setUser] = useState(JSON.parse(localStorage.getItem("profile")));
 
-  // A log in effecter, what happens after log in.
-  useEffect(() => {
-    // If a token of a logged in user found
-    const token = user?.token;
+  // // A log in effecter, what happens after log in.
+  // useEffect(() => {
+  //   // If a token of a logged in user found
+  //   const token = user?.token;
 
-    setUser(JSON.parse(localStorage.getItem("profile")));
-  }, [location]);
+  //   setUser(JSON.parse(localStorage.getItem("profile")));
+  // }, [location]);
 
-  const logOut = () => {
-    dispatch({ type: "LOGOUT" });
+  // const logOut = () => {
+  //   dispatch({ type: "LOGOUT" });
+  //   navigate("/");
+  //   setUser(null);
+  // };
+
+  const handleLogout = () => {
+    localStorage.removeItem("token");
+    window.location.reload();
     navigate("/");
-    setUser(null);
   };
+
+  const user = localStorage.getItem("token");
 
   return (
     <div>
-     
-
       <header className="u-clearfix u-header u-header" id="sec-ddba">
         <div className="u-clearfix u-sheet u-sheet-1">
           <h1 className="u-align-left u-custom-font u-font-ubuntu u-text u-text-default u-text-palette-1-dark-1 u-text-1">
@@ -97,7 +101,7 @@ const Navbar = () => {
                   <li className="u-nav-item">
                     <a
                       className="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
-                      href="/signIn"
+                      href="/login"
                       style={{ padding: "10px 28px" }}
                     >
                       Log In
@@ -108,7 +112,7 @@ const Navbar = () => {
                     <a
                       className="u-button-style u-nav-link u-text-active-palette-1-base u-text-grey-90 u-text-hover-grey-90"
                       href="javascript:"
-                      onClick={logOut}
+                      onClick={handleLogout}
                       style={{ padding: "10px 28px" }}
                     >
                       Log Out
