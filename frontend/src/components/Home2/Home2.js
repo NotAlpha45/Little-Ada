@@ -72,6 +72,7 @@ const Home = () => {
                     className="u-hover-feature u-image u-image-round u-image-1"
                     data-image-width={1280}
                     data-image-height={868}
+                    data-href="/algorithm"
                   />
                   <h4 className="u-text u-text-palette-1-base u-text-3">
                     Byte Sized Resources
@@ -110,15 +111,16 @@ const Home = () => {
                     className="u-hover-feature u-image u-image-contain u-image-round u-image-3"
                     data-image-width={900}
                     data-image-height={878}
+                    data-href="/blog"
                   />
                   <h4 className="u-text u-text-palette-1-base u-text-9">
-                    Practice To Expand
+                    Read To Expand
                   </h4>
                   <h4 className="u-text u-text-palette-1-base u-text-10">
-                    Practice To Expand
+                    Read To Expand
                   </h4>
                   <p className="u-text u-text-palette-1-base u-text-11">
-                    Explore various problems to solidify knowledge.
+                    Explore various coding blogs written by expert users.
                   </p>
                 </div>
               </div>
