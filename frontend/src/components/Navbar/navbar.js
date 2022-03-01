@@ -32,7 +32,7 @@ const Navbar = () => {
   const handleLogout = () => {
     localStorage.removeItem("token");
     window.location.reload();
-    navigate("/");
+    navigate("/")
   };
 
   const user = localStorage.getItem("token");

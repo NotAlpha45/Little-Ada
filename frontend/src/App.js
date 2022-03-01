@@ -18,7 +18,7 @@ import SignUp from "./components/Singup/";
 import Login from "./components/Login";
 
 const App = () => {
-  const user = localStorage.getItem("token");
+  // const user = localStorage.getItem("token");
   return (
     <BrowserRouter>
       <Container maxWidth="lg">
