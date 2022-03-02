@@ -1,6 +1,7 @@
 import { useLocation } from "react-router";
 
 import Posts from "../../components/Posts/Posts";
+import Sidebar from "../../components/Sidebar/Sidebar"
 import "./Blog.css";
 
 export default function Blog() {
@@ -11,6 +12,7 @@ export default function Blog() {
       
       <div className="blog">
         <Posts/> 
+        <Sidebar/>
         
       </div>
     </>
