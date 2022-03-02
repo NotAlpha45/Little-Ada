@@ -12,10 +12,11 @@ import Blog from "./components/Blog/Blog";
 import Algorithm from "./components/Algorithm/Algorithm";
 import BubbleSort from "./components/Algorithm/BubbleSort/BubbleSort";
 
-// Experimantal implementation of the login and signup
-
 import SignUp from "./components/Singup/";
 import Login from "./components/Login";
+
+import Write from "./components/Write/Write";
+import SinglePost from "./components/SinglePage/SinglePost";
 
 const App = () => {
   // const user = localStorage.getItem("token");
@@ -36,6 +37,8 @@ const App = () => {
 
           <Route path="/signup" exact element={<SignUp />} />
           <Route path="/login" exact element={<Login />} />
+          <Route path="/write" element={<Write />} />
+          <Route path="/singlePost" element={<SinglePost />} />
           {/* <Route path="/editor" element={<Editor />} /> */}
         </Routes>
       </Container>
