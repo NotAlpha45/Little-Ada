@@ -1,0 +1,38 @@
+module.exports = `
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <script src="../../Algorithm/Visualization_resources/node_modules/p5.min.js"></script>
+    <script src="../../Algorithm/Visualization_resources/node_modules/p5.sound.js"></script>
+    <script src="../../Algorithm/Visualization_resources/functions.js"></script>
+    <script src="../../Algorithm/Visualization_resources/parameters.js"></script>
+    <script src="../../Algorithm/Visualization_resources/components.js"></script>
+
+    <link rel="stylesheet" href="/style_sheet.css" />
+    <title>Sort Visualizer</title>
+  </head>
+  <body>
+    <div class="description">
+      <h1>Sort Visualizer</h1>
+    </div>
+    <div class="container1" id="canvas_div"></div>
+    <div class="container2" id="code_explainer">
+      <iframe
+        src="https://pythontutor.com/iframe-embed.html#code=%23%20Bubble%20sort%20in%20Python%0A%0Adef%20bubbleSort%28array%29%3A%0A%20%20%20%20%0A%20%20%23%20loop%20to%20access%20each%20array%20element%0A%20%20for%20i%20in%20range%28len%28array%29%29%3A%0A%0A%20%20%20%20%23%20loop%20to%20compare%20array%20elements%0A%20%20%20%20for%20j%20in%20range%280,%20len%28array%29%20-%20i%20-%201%29%3A%0A%0A%20%20%20%20%20%20%23%20compare%20two%20adjacent%20elements%0A%20%20%20%20%20%20%23%20change%20%3E%20to%20%3C%20to%20sort%20in%20descending%20order%0A%20%20%20%20%20%20if%20array%5Bj%5D%20%3E%20array%5Bj%20%2B%201%5D%3A%0A%0A%20%20%20%20%20%20%20%20%23%20swapping%20elements%20if%20elements%0A%20%20%20%20%20%20%20%20%23%20are%20not%20in%20the%20intended%20order%0A%20%20%20%20%20%20%20%20temp%20%3D%20array%5Bj%5D%0A%20%20%20%20%20%20%20%20array%5Bj%5D%20%3D%20array%5Bj%2B1%5D%0A%20%20%20%20%20%20%20%20array%5Bj%2B1%5D%20%3D%20temp%0A%0A%0Adata%20%3D%20%5B-2,%2045,%200,%2011,%20-9%5D%0A%0AbubbleSort%28data%29%0A%0Aprint%28'Sorted%20Array%20in%20Ascending%20Order%3A'%29%0Aprint%28data%29&codeDivHeight=400&codeDivWidth=350&cumulative=false&curInstr=0&heapPrimitives=nevernest&origin=opt-frontend.js&py=3&rawInputLstJSON=%5B%5D&textReferences=false"
+      >
+      </iframe>
+    </div>
+
+    <script>
+      current_selected_sort = "bubble";
+    </script>
+
+    <script src="/bubbleSort.js"></script>
+    <script src="/main.js"></script>
+  </body>
+</html>
+
+`;

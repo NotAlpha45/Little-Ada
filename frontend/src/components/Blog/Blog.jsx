@@ -1,5 +1,5 @@
 import { useLocation } from "react-router";
-
+import React from "react";
 import Posts from "../../components/Posts/Posts";
 import Sidebar from "../../components/Sidebar/Sidebar"
 import "./Blog.css";
