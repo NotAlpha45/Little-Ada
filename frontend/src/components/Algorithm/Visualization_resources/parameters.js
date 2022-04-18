@@ -39,7 +39,7 @@ let sound_enabled = false;
 
 // Parameters for canvas and other components
 let drawing_canvas;
-let canvas_size = [1000, 400],
+let canvas_size = [600, 400],
   canvas_parent = "canvas_div";
 let frame_rate = 60;
 let array_size_slider, operation_speed_slider;

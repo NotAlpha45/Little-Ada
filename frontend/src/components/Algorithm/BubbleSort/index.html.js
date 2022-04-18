@@ -27,11 +27,11 @@ module.exports = `
     </div>
 
     <script>
-      current_selected_sort = "bubble";
+      current_selected_sort = "merge";
     </script>
 
-    <script src="/bubbleSort.js"></script>
-    <script src="/main.js"></script>
+    <script src="/bubbleSortAlgo.js"></script>
+    <script src="../../Algorithm/Visualization_resources/main.js"></script>
   </body>
 </html>
 

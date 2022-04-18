@@ -53,7 +53,9 @@ const BubbleSort = () => {
                 Let's take a look how this sorting works:
               </p>
             </div>
-            <span dangerouslySetInnerHTML={template} />
+            <div style={{margin: "auto",display:'flex', justifyContent: 'center'}}>
+              <span dangerouslySetInnerHTML={template} />
+            </div>
           </div>
 
           <div>
