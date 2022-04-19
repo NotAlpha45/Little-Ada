@@ -4,7 +4,7 @@ import "./BubbleSort.css";
 const BubbleSort = () => {
   return (
     <div>
-      <title>BubbleSort</title>
+      <title>Bubble Sort</title>
 
       <section className="u-clearfix u-section-BubbleSort-1" id="sec-587c">
         <div className="u-clearfix u-sheet u-sheet-1">

@@ -76,7 +76,7 @@ const Algorithm = () => {
                         alt=""
                         data-image-width={661}
                         data-image-height={561}
-                        data-href="#"
+                        data-href="/merge_sort"
                       />
                       <p className="u-align-center u-text u-text-black u-text-8">
                         Divide them, sort them and merge them!

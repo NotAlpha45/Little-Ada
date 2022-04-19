@@ -11,6 +11,7 @@ import Playground from "./components/Playground/Playground";
 import Blog from "./components/Blog/Blog";
 import Algorithm from "./components/Algorithm/Algorithm";
 import BubbleSort from "./components/Algorithm/BubbleSort/BubbleSort";
+import MergeSort from "./components/Algorithm/MergeSort/MergeSort";
 
 import SignUp from "./components/Singup/";
 import Login from "./components/Login";
@@ -34,6 +35,7 @@ const App = () => {
           <Route path="/blog" element={<Blog />} />
           <Route path="/algorithm" element={<Algorithm />} />
           <Route path="/bubble_sort" element={<BubbleSort />} />
+          <Route path="/merge_sort" element={<MergeSort />} />
 
           <Route path="/signup" exact element={<SignUp />} />
           <Route path="/login" exact element={<Login />} />
