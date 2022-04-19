@@ -24,9 +24,9 @@ const MergeSort = () => {
           </h3>
           <p className="u-align-left u-text u-text-3">
             Merge sort, divides an array into smaller and smaller pieces. The
-            small pieces are sorted by just a swpie. Then, the pieces are merged
-            (Hence the name). The merge is a very straightforeward looping
-            mechanism.
+            division is done at the middle. The small pieces are sorted by just
+            a swpie. Then, the pieces are merged (Hence the name). The merge is
+            a very straightforeward looping mechanism.
             <br />
             This&nbsp; sort works recursively, and is an instance of a divide
             and conquer algorithm
@@ -73,13 +73,21 @@ const MergeSort = () => {
           </div>
 
           <div>
-            <span className="u-file-icon u-icon u-icon-2">
+            <span className="u-file-icon u-icon u-icon-2">vb
               <img src={require("./images/4257812.png")} alt="" />
             </span>
             <h3 className="u-custom-font u-font-ubuntu u-text u-text-default u-text-3">
               Algorithm
             </h3>
             <p className="u-text u-text-4">A simple algorithm in python :</p>
+            <div>
+              <iframe
+                src="https://www.jdoodle.com/embed/v0/4IBp"
+                title="Code Simulator"
+                width="100%"
+                height="550"
+              ></iframe>
+            </div>
           </div>
         </div>
       </section>
