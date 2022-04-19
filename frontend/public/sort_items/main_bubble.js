@@ -1,9 +1,10 @@
-current_selected_sort = "quick";
+let canvas_parent_bubble = "canvas_div_bubble";
+let drawing_canvas_bubble;
 function setup() {
   canvas_size[1] = windowHeight - 100;
   translate_components(windowWidth);
-  drawing_canvas = createCanvas(canvas_size[0], canvas_size[1]);
-  drawing_canvas.parent(canvas_parent);
+  drawing_canvas_bubble = createCanvas(canvas_size[0], canvas_size[1]);
+  drawing_canvas_bubble.parent(canvas_parent_bubble);
 
   frameRate(frame_rate);
   background(background_color);
@@ -11,7 +12,7 @@ function setup() {
   oscelerator = new p5.Oscillator(oscelerator_wave_type);
 
   element_maker(
-    canvas_parent,
+    canvas_parent_bubble,
     "h2",
     "Array Size 📏",
     [20, 0],
@@ -19,7 +20,7 @@ function setup() {
   );
 
   array_size_slider = slider_maker(
-    canvas_parent,
+    canvas_parent_bubble,
     50,
     200,
     100,
@@ -29,7 +30,7 @@ function setup() {
   );
 
   element_maker(
-    canvas_parent,
+    canvas_parent_bubble,
     "h2",
     "Slowdown 🏃‍♂️",
     [20, 60],
@@ -37,7 +38,7 @@ function setup() {
   );
 
   operation_speed_slider = slider_maker(
-    canvas_parent,
+    canvas_parent_bubble,
     10,
     110,
     operation_speed,
@@ -47,7 +48,7 @@ function setup() {
   );
 
   // sort_dropdown_list = dropdown_maker(
-  //   canvas_parent,
+  //   canvas_parent_bubble,
   //   [30, 120],
   //   sort_list,
   //   current_selected_sort,
@@ -55,7 +56,7 @@ function setup() {
   // );
 
   sound_checkbox = checkbox_maker(
-    canvas_parent,
+    canvas_parent_bubble,
     "Sound enabled",
     false,
     [20, 190],
@@ -79,11 +80,11 @@ function setup() {
   // });
 
   button_maker(
-    canvas_parent,
+    canvas_parent_bubble,
     [20, 230],
     "Run",
     function () {
-      sort_caller(current_selected_sort, random_array);
+      sort_caller("bubble", random_array);
     },
     run_button_attributes
   );

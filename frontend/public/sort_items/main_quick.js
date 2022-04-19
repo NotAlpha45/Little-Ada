@@ -1,11 +1,10 @@
-// current_selected_sort = "merge";
-let canvas_parent_merge = "canvas_div_merge";
-let drawing_canvas_merge;
+let canvas_parent_quick = "canvas_div_quick";
+let drawing_canvas_quick;
 function setup() {
   canvas_size[1] = windowHeight - 100;
   translate_components(windowWidth);
-  drawing_canvas_merge = createCanvas(canvas_size[0], canvas_size[1]);
-  drawing_canvas_merge.parent(canvas_parent_merge);
+  drawing_canvas_quick = createCanvas(canvas_size[0], canvas_size[1]);
+  drawing_canvas_quick.parent(canvas_parent_quick);
 
   frameRate(frame_rate);
   background(background_color);
@@ -13,7 +12,7 @@ function setup() {
   oscelerator = new p5.Oscillator(oscelerator_wave_type);
 
   element_maker(
-    canvas_parent_merge,
+    canvas_parent_quick,
     "h2",
     "Array Size 📏",
     [20, 0],
@@ -21,7 +20,7 @@ function setup() {
   );
 
   array_size_slider = slider_maker(
-    canvas_parent_merge,
+    canvas_parent_quick,
     50,
     200,
     100,
@@ -31,7 +30,7 @@ function setup() {
   );
 
   element_maker(
-    canvas_parent_merge,
+    canvas_parent_quick,
     "h2",
     "Slowdown 🏃‍♂️",
     [20, 60],
@@ -39,7 +38,7 @@ function setup() {
   );
 
   operation_speed_slider = slider_maker(
-    canvas_parent_merge,
+    canvas_parent_quick,
     10,
     110,
     operation_speed,
@@ -49,15 +48,15 @@ function setup() {
   );
 
   // sort_dropdown_list = dropdown_maker(
-  //   canvas_parent_merge,
+  //   canvas_parent_quick,
   //   [30, 120],
   //   sort_list,
-  //   current_selected_sort,
+  //   "quick",
   //   sort_dropdown_attributes
   // );
 
   sound_checkbox = checkbox_maker(
-    canvas_parent_merge,
+    canvas_parent_quick,
     "Sound enabled",
     false,
     [20, 190],
@@ -77,15 +76,15 @@ function setup() {
   });
 
   // sort_dropdown_list.changed(function () {
-  //   current_selected_sort = sort_dropdown_list.value();
+  //   "quick" = sort_dropdown_list.value();
   // });
 
   button_maker(
-    canvas_parent_merge,
+    canvas_parent_quick,
     [20, 230],
     "Run",
     function () {
-      sort_caller("merge", random_array);
+      sort_caller("quick", random_array);
     },
     run_button_attributes
   );

@@ -1,20 +1,18 @@
 import React from "react";
-import "./MergeSort.css";
-
-const MergeSort = () => {
+import "./QuickSort.css";
+const QuickSort = () => {
   return (
     <div>
-      <title>Merge Sort</title>
       <section className="u-clearfix u-section-1" id="sec-587c">
         <div className="u-clearfix u-sheet u-sheet-1">
           <span className="u-file-icon u-icon u-icon-1">
-            <img src={require("./images/275127.png")} alt="" />
+            <img src={require("./images/1067357.png")} alt="" />
           </span>
           <span className="u-file-icon u-icon u-icon-2">
-            <img src={require("./images/2751271.png")} alt="" />
+            <img src={require("./images/10673571.png")} alt="" />
           </span>
           <h1 className="u-align-center u-custom-font u-font-roboto-slab u-text u-text-default u-text-1">
-            Merge Sort
+            Quick Sort
           </h1>
           <span className="u-file-icon u-icon u-icon-3">
             <img src={require("./images/189665.png")} alt="" />
@@ -23,39 +21,51 @@ const MergeSort = () => {
             About
           </h3>
           <p className="u-align-left u-text u-text-3">
-            Merge sort, divides an array into smaller and smaller pieces. The
-            division is done at the middle. The small pieces are sorted by just
-            a swpie. Then, the pieces are merged (Hence the name). The merge is
-            a very straightforeward looping mechanism.
+            Quick sort, also divides the array into pieces. However, it divides
+            the array based on a pivot element - an element that is placed in
+            such a way that it's position would be the exact one in the sorted
+            array. Ususally, the last element of an array is selected to be
+            positioned as a pivot. During the positioning process, most of the
+            other elements are more or less placed in an ascending (or
+            descending) manner. This makes the marging and sorting in general
+            musch faster, even in edge cases.&nbsp;
             <br />
-            This&nbsp; sort works recursively, and is an instance of a divide
-            and conquer algorithm
+            The merging is pretty straightforeward, taking all the pivots in
+            each recursive process will give the sorted array.
+            <br />
+            Quick sort is also a divide and conquer algorithm like{" "}
+            <a
+              href="https://nicepage.com/website-mockup"
+              className="u-active-none u-border-none u-btn u-button-link u-button-style u-hover-none u-none u-text-palette-1-base u-btn-1"
+              target="_blank"
+            >
+              merge sort
+            </a>
+            . Take a look as how this pivoting works :
           </p>
           <img
             className="u-image u-image-default u-image-1"
-            src={require("./images/MergeSort.png")}
+            src={require("./images/quicksort.jpg")}
             alt=""
-            data-image-width={721}
-            data-image-height={521}
+            data-image-width={564}
+            data-image-height={717}
           />
         </div>
       </section>
       <section className="u-clearfix u-section-2" id="sec-14d7">
         <div className="u-clearfix u-sheet u-sheet-1">
-          <div>
-            <h3 className="u-align-left u-custom-font u-font-ubuntu u-text u-text-default u-text-1">
-              Complexity
-            </h3>
-            <span className="u-file-icon u-icon u-icon-1">
-              <img src={require("./images/1066371.png")} alt="" />
-            </span>
-            <p className="u-align-left u-text u-text-2">
-              <b>The time complexity :</b> O(nlog(n))
-              <br />
-              The dividing of an array sized n takes log(n) time, and the
-              merging of two divided parts takes log(n) time.
-            </p>
-          </div>
+          <h3 className="u-align-left u-custom-font u-font-ubuntu u-text u-text-default u-text-1">
+            Complexity
+          </h3>
+          <span className="u-file-icon u-icon u-icon-1">
+            <img src={require("./images/1066371.png")} alt="" />
+          </span>
+          <p className="u-align-left u-text u-text-2">
+            <b>The time complexity :</b> O(nlog(n)) in average case.
+            <br />
+            The dividing of an array sized n takes log(n) time, and the pivot
+            calculation takes n time.
+          </p>
 
           <div>
             <span className="u-file-icon u-icon u-icon-2">
@@ -68,7 +78,7 @@ const MergeSort = () => {
               {" "}
               Let's see how this sort looks like&nbsp;:
             </p>
-            <div className="container1" id="canvas_div_merge"></div>
+            <div className="container1" id="canvas_div_quick"></div>
           </div>
           <div>
             <span className="u-file-icon u-icon u-icon-3">
@@ -94,4 +104,4 @@ const MergeSort = () => {
   );
 };
 
-export default MergeSort;
+export default QuickSort;

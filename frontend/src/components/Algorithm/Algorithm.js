@@ -146,7 +146,7 @@ const Algorithm = () => {
                         alt=""
                         data-image-width={577}
                         data-image-height={410}
-                        data-href="#"
+                        data-href="/quick_sort"
                       />
                       <p className="u-align-center u-text u-text-black u-text-14">
                         Place an element where it belongs and repeat for the

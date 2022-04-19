@@ -52,7 +52,7 @@ const BubbleSort = () => {
             </div>
             <div>
               {/* <span dangerouslySetInnerHTML={template} /> */}
-              <div className="container1" id="canvas_div"></div>
+              <div className="container1" id="canvas_div_bubble"></div>
             </div>
           </div>
 
