@@ -35,11 +35,6 @@ function setup() {
     sorting_speed_element_attributes
   );
 
-  input = createInput("Enter Custom Values");
-  input.parent(canvas_parent);
-  input.position(20, 60);
-  input.size(60);
-
   operation_speed_slider = slider_maker(
     canvas_parent,
     10,

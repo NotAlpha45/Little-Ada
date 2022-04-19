@@ -1,9 +1,6 @@
 import React from "react";
 import "./BubbleSort.css";
 
-var __html = require("./index.html.js");
-var template = { __html: __html };
-
 const BubbleSort = () => {
   return (
     <div>
@@ -53,8 +50,9 @@ const BubbleSort = () => {
                 Let's take a look how this sorting works:
               </p>
             </div>
-            <div style={{margin: "auto",display:'flex', justifyContent: 'center'}}>
-              <span dangerouslySetInnerHTML={template} />
+            <div>
+              {/* <span dangerouslySetInnerHTML={template} /> */}
+              <div className="container1" id="canvas_div"></div>
             </div>
           </div>
 

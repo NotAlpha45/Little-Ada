@@ -1,3 +1,4 @@
+current_selected_sort = "quick";
 function setup() {
   canvas_size[1] = windowHeight - 100;
   translate_components(windowWidth);

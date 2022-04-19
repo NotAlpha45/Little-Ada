@@ -13,7 +13,7 @@ const sort_list = [
   "tim",
 ];
 
-let current_selected_sort = "quick";
+let current_selected_sort = "bubble";
 
 const sort_type_export = { selected: current_selected_sort };
 
