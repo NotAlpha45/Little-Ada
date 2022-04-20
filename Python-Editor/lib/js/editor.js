@@ -95,7 +95,7 @@ executeCodeBtn.addEventListener("click", () => {
   try {
     request.done(async function (response, textStatus, jqXHR) {
       let token = response.token;
-      await new Promise((resolve) => setTimeout(resolve, 100)); // 3 sec
+      await new Promise((resolve) => setTimeout(resolve, 10)); // 3 sec
 
       let second_request = $.ajax({
         url: BASE_URL + "/" + token,
