@@ -1,8 +1,11 @@
 .post {
-  width: 385px;
-  margin: 0px 25px 40px 25px;
+  width: 600px;
+  height: 300px;
+  margin: 10px 25px 25px 25px;
   display: flex;
   flex-direction: column;
+  background-color: #f9faed;
+  border-radius: 4%;
 }
 
 .postImg {
@@ -24,7 +27,7 @@
   font-size: 11px;
   color: #be9656;
   line-height: 19px;
-  margin-top: 15px;
+  margin-top: 25px;
   margin-right: 10px;
   cursor: pointer;
 }
