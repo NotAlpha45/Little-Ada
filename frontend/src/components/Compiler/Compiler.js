@@ -1,6 +1,7 @@
 import React from "react";
 import "./compiler.css";
-
+var __html = require('./index.html.js');
+var template = { __html: __html };
 const Compiler = () => {
   return (
     <div>
@@ -15,6 +16,9 @@ const Compiler = () => {
           <h4 className="u-custom-font u-font-courier-new u-text u-text-default u-text-2">
             A python editor to jus​​t type and run!
           </h4>
+        </div>
+        <div>
+        <span dangerouslySetInnerHTML={template} />
         </div>
         {/* <div>
           <div>
