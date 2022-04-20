@@ -14,7 +14,7 @@ import BubbleSort from "./components/Algorithm/BubbleSort/BubbleSort";
 import MergeSort from "./components/Algorithm/MergeSort/MergeSort";
 import QuickSort from "./components/Algorithm/QuickSort/QuickSort";
 
-import Compiler from "./components/Compiler/Compiler";
+// import Compiler from "./components/Compiler/Compiler";
 
 import SignUp from "./components/Singup/";
 import Login from "./components/Login";
@@ -40,7 +40,7 @@ const App = () => {
           <Route path="/bubble_sort" element={<BubbleSort />} />
           <Route path="/merge_sort" element={<MergeSort />} />
           <Route path="/quick_sort" element={<QuickSort />} />
-          <Route path="/compiler" element={<Compiler />} />
+          {/* <Route path="/compiler" element={<Compiler />} /> */}
           <Route path="/signup" exact element={<SignUp />} />
           <Route path="/login" exact element={<Login />} />
           <Route path="/write" element={<Write />} />
