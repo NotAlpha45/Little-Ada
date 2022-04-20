@@ -1,38 +1,26 @@
-import { Link } from "react-router-dom";
 import "./Post.css";
+import { Link } from "react-router-dom";
 
-export default function Post({img}) {
+export default function Post({ post }) {
+  const PF = "http://localhost:8080/images/";
   return (
     <div className="post">
-      <img
-        className="postImg"
-        src={img}
-        alt=""
-      />
+      
       <div className="postInfo">
         <div className="postCats">
-          <span className="postCat">
-            <Link className="link" to="/SinglePost">
-              Graph
-            </Link>
-          </span>
-          <span className="postCat">
-            <Link className="link" to="/SinglePost">
-              Tree
-            </Link>
-          </span>
+          {<span className="postCat">{post.categories}</span>
+          
+        }
         </div>
-        <span className="postTitle">
-          <Link to="/SinglePost" className="link">
-            Depth First Search
-          </Link>
-        </span>
+        <Link to={`/post/${post._id}`} className="link">
+          <span className="postTitle">{post.title}</span>
+        </Link>
         <hr />
-        <span className="postDate">1 hour ago</span>
+        <span className="postDate">
+          {new Date(post.createdAt).toDateString()}
+        </span>
       </div>
-      <p className="postDesc">
-      Depth-first search (DFS) is an algorithm for traversing or searching tree or graph data structures. The algorithm starts at the root node (selecting some arbitrary node as the root node in the case of a graph) and explores as far as possible along each branch before backtracking.
-      </p>
+      <p className="postDesc">{post.desc}</p>
     </div>
   );
 }
