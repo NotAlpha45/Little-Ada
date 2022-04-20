@@ -147,7 +147,7 @@ const Home = () => {
           alt=""
           data-image-width={1092}
           data-image-height={762}
-          data-href="/editor"
+          data-href="/compiler"
         />
       </section>
     </div>

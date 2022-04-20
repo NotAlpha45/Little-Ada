@@ -3,6 +3,7 @@ import "./QuickSort.css";
 const QuickSort = () => {
   return (
     <div>
+      <title>Quick Sort</title>
       <section className="u-clearfix u-section-1" id="sec-587c">
         <div className="u-clearfix u-sheet u-sheet-1">
           <span className="u-file-icon u-icon u-icon-1">
@@ -78,7 +79,10 @@ const QuickSort = () => {
               {" "}
               Let's see how this sort looks like&nbsp;:
             </p>
-            <div className="container1" id="canvas_div_quick"></div>
+            
+          </div>
+          <div style={{justifyContent: 'center', alignItems:"center"}}>
+          <div className="container1" id="canvas_div_quick"></div>
           </div>
           <div>
             <span className="u-file-icon u-icon u-icon-3">
@@ -92,7 +96,7 @@ const QuickSort = () => {
           <p className="u-text u-text-6">A simple algorithm in python :</p>
           <div>
             <iframe
-              src="https://www.jdoodle.com/embed/v0/4IBp"
+              src="https://www.jdoodle.com/embed/v0/4IHV"
               title="Code Simulator"
               width="100%"
               height="550"
