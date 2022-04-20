@@ -40,7 +40,7 @@ const App = () => {
           <Route path="/signup" exact element={<SignUp />} />
           <Route path="/login" exact element={<Login />} />
           <Route path="/write" element={<Write />} />
-          <Route path="/singlePost" element={<SinglePost />} />
+          <Route path="/post/:postId" element={<SinglePost />} />
           {/* <Route path="/editor" element={<Editor />} /> */}
         </Routes>
       </Container>
